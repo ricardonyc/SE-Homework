@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+:root {
+  --blue-primary: #5175ff;
+  --blue-secondary: #829cff;
+  --dark-navy: #25293a;
+  --navy: #333950;
+  --gray: #747b95;
+  --red: #f05b5b;
+  font-family: "Fjalla One", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height: 150vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav .nav-ul {
+  display: none;
+}
+
+nav .logo {
+  margin-left: 1rem;
+}
+
+nav .desktop-logo {
+  display: none;
+}
+
+.mobile-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.mobile-overlay .close-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  position: absolute;
+  right: 25px;
+  top: 4px;
+}
+
+.mobile-overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-overlay .overlay-content a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+nav .fa-bars {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.letter-r,
+.letter-v {
+  color: red;
+}
+
+main .top-section {
+  height: 100vh;
+  background: rgb(172, 172, 172);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 740px) {
+  nav {
+    height: 85px;
+  }
+
+  nav .fa-bars {
+    display: none;
+  }
+
+  nav .nav-ul {
+    display: flex;
+  }
+
+  nav .nav-ul li {
+    height: 100%;
+    list-style: none;
+  }
+
+  nav .nav-ul li a {
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid transparent;
+    height: 84px;
+    margin-right: 2rem;
+    color: black;
+    transition: all 250ms ease;
+    font-size: 1.4rem;
+    text-decoration: none;
+    /* outline: 1px solid red; */
+  }
+
+  nav .nav-ul li a:hover {
+    border-bottom: 4px solid black;
+  }
+
+  nav .nav-ul li a:active {
+    border-bottom: 4px solid red;
+  }
+
+  nav .logo .desktop-logo {
+    display: block;
+    /* outline: 1px solid; */
+  }
+
+  nav .logo .mobile-logo {
+    display: none;
+  }
+}

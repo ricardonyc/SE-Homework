@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Vargas</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="RV.svg" alt="" class='mobile-logo'>
+            <img src="desktop-RV.svg" alt="" class='desktop-logo'>
+        </div>
+        <ul class='nav-ul'>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PHOTOS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+
+        <i class="fas fa-bars" onclick="openNav()"></i>
+    </nav>
+
+    <div id='mobile-nav' class="mobile-overlay">
+        <a href="#" class='close-btn' onclick='closeNav()'>&times;</a>
+        <div class="overlay-content">
+            <a href="#">ABOUT</a>
+            <a href="#">PHOTOS</a>
+            <a href="#">CONTACT</a>
+        </div>
+    </div>
+
+    <main>
+        <section class='top-section'>
+            <h2><span class='letter-r'>R</span>icardo <span class='letter-v'>V</span>argas</h2>
+        </section>
+
+    </main>
+    <!-- Javascript -->
+    <script>
+        function openNav() {
+            document.getElementById("mobile-nav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mobile-nav").style.height = "0%";
+        }
+    </script>
+</body>
+
+</html>
