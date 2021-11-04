@@ -37,7 +37,15 @@
 
     <main>
         <section class='top-section'>
-            <h2> <span class='hello'>Hello,</span> <br> my name is <br> <span class='ricardo'>Ricardo.</span> </h2>
+            <div class="text">
+                <h2> <span class='hello'>Hello,</span> <br> my name is <br> <span class='ricardo'>Ricardo.</span> </h2>
+                <h3>Welcome to my website!</h3>
+            </div>
+        </section>
+
+        <section class="mid-section">
+            <img src="head.jpg" alt="" class='photo'>
+            <p class='mid-p'>I am a recent graduate from Baruch College who is dedicated full-time to transitioning into the tech world, specifically <span class='software-development'>Software Development.</span></p>
         </section>
 
     </main>
@@ -51,11 +59,11 @@
             document.getElementById("mobile-nav").style.height = "0%";
         }
 
-        // window.addEventListener('scroll', function(){
-        //     let navbar = document.querySelector('.nav-bar');
+        window.addEventListener('scroll', function () {
+            let navbar = document.querySelector('.nav-bar');
 
-        //     navbar.classList.toggle('scrolling-active', window.scrollY > 1);
-        // })
+            navbar.classList.toggle('scrolling-active', window.scrollY > 1);
+        })
     </script>
 </body>
 
