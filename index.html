@@ -18,9 +18,10 @@
             <img src="desktop-RV.svg" alt="" class='desktop-logo'>
         </div>
         <ul class='nav-ul'>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="#contact">Links</a></li>
         </ul>
 
         <i class="fas fa-bars" onclick="openNav()"></i>
@@ -29,26 +30,61 @@
     <div id='mobile-nav' class="mobile-overlay">
         <a href="#" class='close-btn' onclick='closeNav()'>&times;</a>
         <div class="overlay-content">
-            <a href="#">ABOUT</a>
-            <a href="#">PHOTOS</a>
-            <a href="#">CONTACT</a>
+            <a href="index.html">HOME</a>
+            <a href="#about" onclick='closeNav()'>ABOUT</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="#contact" onclick='closeNav()'>LINKS</a>
         </div>
     </div>
 
     <main>
-        <section class='top-section'>
+        <section class='top-section' id='top'>
             <div class="text">
                 <h2> <span class='hello'>Hello,</span> <br> my name is <br> <span class='ricardo'>Ricardo.</span> </h2>
                 <h3>Welcome to my website!</h3>
             </div>
         </section>
 
-        <section class="mid-section">
+        <section class="mid-section" id='about'>
             <img src="head.jpg" alt="" class='photo'>
-            <p class='mid-p'>I am a recent graduate from Baruch College who is dedicated full-time to transitioning into the tech world, specifically <span class='software-development'>Software Development.</span></p>
+            <h3 class='about'>About</h3>
+            <p class='mid-p'>Born and raised in the Bronx, I graduated from LaGuardia Community College with a Business
+                degree and have recently graduated from Baruch College with a Journalism degree. </p>
+            <p class='mid-p'>Having struggled
+                throughout my academic career to find what career path interests me the most, I discovered <span
+                    class='software-development'>Software Development,</span> a career path in which I'll be able to use
+                my
+                problem-solving skills and creativity. I am now dedicated full-time to transitioning into <span
+                    class='software-development'>Software Development.</span></p>
         </section>
 
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-EfopatfJ0s"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <footer>
+            <h4>Links</h4>
+            <div class="icons">
+                <div class="github">
+                    <a href="https://github.com/ricardonyc/SE-Homework" target='_blank'><i
+                            class="fab fa-github fa-3x"></i></a>
+                    <p>GitHub</p>
+                </div>
+                <div class="email">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rvardo98@gmail.com"><i
+                            class="fas fa-paper-plane fa-3x" target='_blank'></i></a>
+                    <p>Email</p>
+                </div>
+            </div>
+        </footer>
+        <a href="#top" class='top' id='contact'>Jump to Top</a>
+
     </main>
+
     <!-- Javascript -->
     <script>
         function openNav() {

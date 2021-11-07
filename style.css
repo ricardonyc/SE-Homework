@@ -18,6 +18,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-  height: 200vh;
+  height: 100vh;
 }
 
 nav {
@@ -42,11 +43,16 @@ nav {
   height: 70px;
   /* background: white; */
   background: var(--green);
-  transition: all 500ms ease;
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+  transition: box-shadow, background 350ms ease-in-out;
 }
 
 .scrolling-active {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+.scrolling-active-hobbies {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   background: white;
 }
@@ -73,6 +79,7 @@ nav .desktop-logo {
   left: 0;
   background-color: rgba(0, 0, 0, 0.93);
   overflow-x: hidden;
+  overflow-y: hidden;
   transition: 500ms;
 }
 
@@ -170,7 +177,7 @@ main .top-section h3 {
   margin-top: 1rem;
   opacity: 0;
   transform: translateY(10rem);
-  animation: fadeInUp 2s ease 1s forwards;
+  animation: fadeInUp 2s ease 500ms forwards;
   overflow: hidden;
 }
 
@@ -189,31 +196,136 @@ main .mid-section {
   /* outline: 1px solid red; */
 }
 
+main .mid-section .about {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--green);
+  border: 2px solid;
+  box-shadow: 5px 5px 0px var(--green);
+  padding: 0.5rem 1.5rem;
+  transition: color, border-color, box-shadow, 200ms ease;
+}
+
+main .mid-section .about:hover {
+  color: var(--navy2);
+  border-color: var(--navy2);
+  box-shadow: 5px 5px 0px var(--navy2);
+}
+
 main .mid-section .photo {
   height: 200px;
   width: 210px;
-  border: 3px solid var(--green);
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgb(5, 56, 107, 0.4);
-  margin: 8rem 0 2rem 0;
+  border: 3px solid var(--navy2);
+  box-shadow: 8px 8px 0px var(--navy2);
+  margin: 8rem 0 3rem 0;
+  transition: transform, box-shadow, border-color, 500ms ease;
+}
+
+main .mid-section .photo:hover {
+  transform: translateY(-10%);
+  box-shadow: 8px 8px 0px var(--green);
+  border-color: var(--green);
 }
 
 main .mid-section .mid-p {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   max-width: 80%;
   color: var(--navy2);
+  line-height: 2.5rem;
+  margin-top: 1.5rem;
   /* outline: 1px solid; */
 }
 
-main .mid-section .mid-p .software-development{
-    color: var(--green);
+main .mid-section .mid-p .software-development {
+  color: var(--green);
+  transition: color 400ms ease;
+}
+
+main .mid-section .mid-p .software-development:hover {
+  color: var(--dark-green);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 400px;
+  height: 0;
+  max-width: 760px;
+  margin: 3rem auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 580px;
+  padding: 2rem 3rem;
+}
+
+.hobbies-section .hobbies-list li::before {
+  content: "";
+  border-left: 3px solid var(--green);
+  margin-right: 1rem;
+}
+
+footer {
+  background: var(--green);
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer h4 {
+  font-size: 1.3rem;
+  color: var(--navy2);
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  box-shadow: 5px 5px 0 var(--navy2);
+}
+
+footer .icons {
+  display: flex;
+}
+
+footer .icons .github,
+footer .icons .email {
+  padding: 0 2rem;
+  text-align: center;
+  color: var(--navy2);
+}
+
+footer .icons .github a,
+footer .icons .email a {
+  color: var(--navy2);
+}
+
+.top {
+  display: block;
+  background: var(--navy2);
+  width: 100%;
+  color: var(--green);
+  text-align: center;
+  padding: 1rem 0;
+  text-decoration: none;
+  transition: color, background 250ms ease-in-out;
+}
+
+.top:hover {
+  background: var(--green);
+  color: var(--navy2);
 }
 
 /* DESKTOP */
-@media (min-width: 740px) {
+@media (min-width: 820px) {
   nav {
     height: 85px;
+    /* border: 1px solid red; */
   }
 
   nav .fa-bars {
@@ -235,11 +347,11 @@ main .mid-section .mid-p .software-development{
     border-bottom: 4px solid transparent;
     height: 84px;
     margin-right: 3rem;
-    /* color: black; */
     color: var(--navy2);
-    transition: all 250ms ease;
+    transition: border-bottom 250ms ease;
     font-size: 1.3rem;
     text-decoration: none;
+    /* cursor: pointer; */
     /* outline: 1px solid red; */
   }
 
@@ -267,6 +379,20 @@ main .mid-section .mid-p .software-development{
 
   main .mid-section .mid-p {
     font-size: 1.3rem;
+  }
+
+  footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+  }
+
+  footer .icons .github,
+  footer .icons .email {
+    font-size: 1.1rem;
+  }
+
+  .top {
+    font-size: 1.4rem;
   }
 }
 
