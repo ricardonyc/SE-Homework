@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Vargas</title>
+</head>
+
+<body>
+    <nav class='nav-bar'>
+        <div class="logo">
+            <a href="index.html"><img src="RV.svg" alt="" class='mobile-logo'></a>
+            <a href="index.html"><img src="desktop-RV.svg" alt="" class='desktop-logo'></a>
+        </div>
+        <ul class='nav-ul'>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="index.html">About</a></li> -->
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <i class="fas fa-bars" onclick="openNav()"></i>
+    </nav>
+
+    <div id='mobile-nav' class="mobile-overlay">
+        <a href="#" class='close-btn' onclick='closeNav()'>&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <!-- <a href="#about" onclick='closeNav()'>ABOUT</a> -->
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="#">CONTACT</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="hobbies-top-section">
+            <h2><span class='hobbies-text'>These are<br>a few of my</span><br><span class='hobbies-word'>
+                    Hobbies.</span></h2>
+        </section>
+
+        <h2 class='hobbies-box'>Hobbies</h2>
+        <section class="hobbies-mid-section">
+            
+            <div class="card-container">
+                <h3>Running</h3>
+                <i class="fas fa-running fa-2x"></i>
+                <ul>
+                    <li>Been running since 2019</li>
+                    <li>Recently ran the Bronx 10 mile marathon</li>
+                    <li>Run at least 3x a week</li>
+                </ul>
+            </div>
+            <div class="card-container">
+                <h3>Photography</h3>
+                <i class="fas fa-camera fa-2x"></i>
+                <ul>
+                    <li>Started in 2017</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Run at least 3x a week</li>
+                </ul>
+            </div>
+            <div class="card-container">
+                <h3>Watching Movies</h3>
+                <i class="fas fa-video fa-2x"></i>
+                <ul>
+                    <li>Really enjoy Marvel movies</li>
+                    <li>Go to the movie theaters at least once a month</li>
+                    <li>Run at least 3x a week</li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mobile-nav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mobile-nav").style.height = "0%";
+        }
+
+        window.addEventListener('scroll', function () {
+            let navbar = document.querySelector('.nav-bar');
+
+            navbar.classList.toggle('scrolling-active-hobbies', window.scrollY > 1);
+        })
+    </script>
+</body>
+
+</html>
