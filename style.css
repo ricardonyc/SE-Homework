@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  height: 200vh;
+  height: 100vh;
 }
 
 nav {
@@ -161,14 +161,22 @@ main .hobbies-top-section::after {
   z-index: -999;
 }
 
-main .top-section h2,
-main .hobbies-top-section h2 {
+main .top-section h1,
+main .hobbies-top-section h1 {
   color: var(--dark-green);
   font-size: 3rem;
   opacity: 0;
   transform: translateY(10rem);
   animation: fadeInUp 2s ease forwards;
-  /* overflow: hidden; */
+}
+
+main .hobbies-top-section .fa-arrow-circle-down {
+  color: var(--navy2);
+  font-size: 2rem;
+  transform: translateY(10rem);
+  animation: fadeInUp 2s ease forwards;
+  transition: color 300ms ease-in-out;
+  margin-top: 3rem;
 }
 
 main .hobbies-top-section .hobbies-text {
@@ -205,7 +213,8 @@ main .mid-section {
   /* outline: 1px solid red; */
 }
 
-main .mid-section .about {
+main .mid-section .about,
+main .bottom-section h3 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: var(--green);
@@ -224,12 +233,6 @@ main .mid-section .photo {
   transition: transform, box-shadow, border-color, 500ms ease;
 }
 
-/* main .mid-section .photo:hover {
-  transform: translateY(-10%);
-  box-shadow: 8px 8px 0px var(--green);
-  border-color: var(--green);
-} */
-
 main .mid-section .mid-p {
   text-align: center;
   font-size: 1.2rem;
@@ -245,17 +248,18 @@ main .mid-section .mid-p .software-development {
   transition: color 400ms ease;
 }
 
-.video-container {
+main .video-container {
   position: relative;
   padding-bottom: 400px;
   height: 0;
   max-width: 760px;
-  margin: 3rem auto;
+  margin: 4rem auto 0 auto;
+  text-align: center;
 }
 
-.video-container iframe {
+main .video-container iframe {
   position: absolute;
-  top: 0;
+  top: 7rem;
   left: 0;
   width: 100%;
   height: 100%;
@@ -263,10 +267,182 @@ main .mid-section .mid-p .software-development {
   padding: 2rem 3rem;
 }
 
+main .video-container h3 {
+  font-size: 1.5rem;
+  color: var(--green);
+  border: 2px solid var(--green);
+  box-shadow: 5px 5px 0 var(--green);
+  display: inline;
+  padding: .5rem 1rem;
+  transition: color, border-color, box-shadow, 200ms ease;
+}
+
+main .video-container #video-paragraph {
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  padding: 0 2rem;
+  color: var(--navy2);
+}
+
 .hobbies-section .hobbies-list li::before {
   content: "";
   border-left: 3px solid var(--green);
   margin-right: 1rem;
+}
+
+main .hobbies-box {
+  width: 140px;
+  margin: 7rem auto 4rem auto;
+  text-align: center;
+  /* margin-top: 5rem; */
+  font-size: 1.5rem;
+  color: var(--green);
+  border: 2px solid;
+  box-shadow: 5px 5px 0px var(--green);
+  padding: 0.5rem 0;
+  transition: color, border-color, box-shadow, 200ms ease;
+}
+
+main .hobbies-top-section h1 {
+  font-size: 3rem;
+  color: var(--navy2);
+}
+
+main .hobbies-mid-section {
+  max-width: 1400px;
+  color: var(--navy2);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+main .hobbies-mid-section .card-container {
+  border: 2px solid;
+  width: 350px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem;
+  box-shadow: 10px 10px 0px var(--navy2);
+  transition: all 300ms ease-in-out;
+}
+
+main .hobbies-mid-section .card-container ul {
+  width: 90%;
+  margin: 2rem auto 0 auto;
+}
+
+main .hobbies-mid-section .card-container ul li {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+main .hobbies-mid-section .card-container ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--navy2); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: .5em; /* Also needed for space (tweak if needed) */
+}
+
+main .hobbies-mid-section .card-container h3 {
+  position: absolute;
+  background: var(--green);
+  width: 100%;
+  padding: 2.5rem 0 1rem 0;
+  text-align: center;
+  top: 0;
+  font-size: 1.5rem;
+}
+
+main .hobbies-mid-section .card-container .fa-running,
+main .hobbies-mid-section .card-container .fa-camera,
+main .hobbies-mid-section .card-container .fa-globe-americas {
+  position: absolute;
+  top: -35px;
+  background: var(--navy2);
+  color: var(--green);
+  padding: 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem auto 0 auto;
+  /* border: 2px solid red; */
+  max-width: 700px;
+}
+
+main .bottom-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+main .bottom-section form {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  color: var(--navy2);
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+
+main .bottom-section form label,
+main .bottom-section form h4 {
+  font-size: 1.2rem;
+}
+
+main .bottom-section form input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  box-sizing: border-box;
+}
+
+main .bottom-section form textarea {
+  padding: 0.5rem 0 0 0.5rem;
+  font-family: sans-serif;
+  resize: none;
+}
+
+main .bottom-section form input[type="text"],
+main .bottom-section form textarea {
+  font-size: 1rem;
+  border: 2px solid var(--navy2);
+}
+
+main .bottom-section form label,
+main .bottom-section form h4 {
+  margin: 1rem 0 0.4rem 0;
+}
+
+main .bottom-section form input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  border-radius: 0;
+  border: 2px solid var(--navy2);
+  background: white;
+  box-shadow: 5px 5px 0px var(--navy2);
+  color: var(--navy2);
+  font-family: "Fjalla One", sans-serif;
+  cursor: pointer;
+  transition: box-shadow, color, border 300ms ease;
 }
 
 footer {
@@ -277,6 +453,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 6rem;
 }
 
 footer h4 {
@@ -313,83 +490,6 @@ footer .icons .email a {
   padding: 1rem 0;
   text-decoration: none;
   transition: color, background 250ms ease-in-out;
-}
-
-main .hobbies-box {
-  width: 140px;
-  margin: 7rem auto 4rem auto;
-  text-align: center;
-  /* margin-top: 5rem; */
-  font-size: 1.5rem;
-  color: var(--green);
-  border: 2px solid;
-  box-shadow: 5px 5px 0px var(--green);
-  padding: 0.5rem 0;
-  transition: color, border-color, box-shadow, 200ms ease;
-}
-
-main .hobbies-top-section h2 {
-  font-size: 3rem;
-  color: var(--navy2);
-}
-
-main .hobbies-mid-section {
-  max-width: 1400px;
-  color: var(--navy2);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  /* border: 1px solid red; */
-}
-
-main .hobbies-mid-section .card-container {
-  border: 2px solid;
-  width: 300px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin: 2rem;
-  box-shadow: 10px 10px 0px var(--navy2);
-  transition: all 300ms ease-in-out;
-  /* margin: 0 2rem; */
-}
-
-main .hobbies-mid-section .card-container ul {
-  border: 1px solid;  
-  width: 90%;
-  margin: auto;
-  /* margin: 2rem; */
-}
-
-main .hobbies-mid-section .card-container h3 {
-  position: absolute;
-  background: var(--green);
-  width: 100%;
-  padding: 2.5rem 0 1rem 0;
-  text-align: center;
-  top: 0;
-  font-size: 1.5rem;
-}
-
-main .hobbies-mid-section .card-container .fa-running,
-main .hobbies-mid-section .card-container .fa-camera,
-main .hobbies-mid-section .card-container .fa-video {
-  position: absolute;
-  top: -35px;
-  background: var(--navy2);
-  color: var(--green);
-  padding: 1rem;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border-radius: 50%;  */
 }
 
 /* DESKTOP */
@@ -450,6 +550,10 @@ main .hobbies-mid-section .card-container .fa-video {
     font-size: 1.3rem;
   }
 
+  main .video-container #video-paragraph {
+    font-size: 1.3rem;
+  }
+
   main .mid-section .photo:hover {
     transform: translateY(-10%);
     box-shadow: 8px 8px 0px var(--green);
@@ -457,7 +561,9 @@ main .hobbies-mid-section .card-container .fa-video {
   }
 
   main .mid-section .about:hover,
-  main .hobbies-box:hover {
+  main .hobbies-box:hover,
+  main .bottom-section h3:hover,
+  main .video-container h3:hover {
     color: var(--navy2);
     border-color: var(--navy2);
     box-shadow: 5px 5px 0px var(--navy2);
@@ -469,6 +575,14 @@ main .hobbies-mid-section .card-container .fa-video {
 
   main .hobbies-mid-section .card-container:hover {
     transform: translateY(-5%);
+  }
+
+  main .hobbies-mid-section .card-container ul {
+    margin-top: 3rem;
+  }
+
+  main .hobbies-mid-section .card-container ul li {
+    font-size: 1.1rem;
   }
 
   footer h4 {
@@ -490,20 +604,37 @@ main .hobbies-mid-section .card-container .fa-video {
     color: var(--navy2);
   }
 
+  main .hobbies-top-section .fa-arrow-circle-down {
+    font-size: 2.5rem;
+  }
+
   main .hobbies-box,
-  main .mid-section .about {
-    font-size: 1.8rem;
+  main .mid-section .about,
+  main .video-container h3 {
+    font-size: 1.7rem;
   }
 
   main .hobbies-mid-section .card-container {
-    width: 330px;
-    height: 380px;
+    width: 350px;
+    height: 330px;
     box-shadow: 10px 10px 0px var(--navy2);
   }
 
   main .hobbies-mid-section .card-container h3 {
     font-size: 1.6rem;
   }
+
+  main .hobbies-top-section .fa-arrow-circle-down:hover {
+    color: var(--navy2);
+  }
+
+  main .bottom-section form input[type="submit"]:hover {
+    box-shadow: 5px 5px 0px var(--green);
+    color: var(--green);
+    border: 2px solid var(--green);
+  }
+  
+
 }
 
 @media (min-width: 1600px) {
