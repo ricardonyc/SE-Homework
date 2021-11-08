@@ -21,7 +21,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="#contact">Links</a></li>
+            <li><a href="#links">Links</a></li>
         </ul>
 
         <i class="fas fa-bars" onclick="openNav()"></i>
@@ -33,14 +33,14 @@
             <a href="index.html">HOME</a>
             <a href="#about" onclick='closeNav()'>ABOUT</a>
             <a href="hobbies.html">HOBBIES</a>
-            <a href="#contact" onclick='closeNav()'>LINKS</a>
+            <a href="#links" onclick='closeNav()'>LINKS</a>
         </div>
     </div>
 
     <main>
         <section class='top-section' id='top'>
             <div class="text">
-                <h2> <span class='hello'>Hello,</span> <br> my name is <br> <span class='ricardo'>Ricardo.</span> </h2>
+                <h1> <span class='hello'>Hello,</span><br> my name is<br> <span class='ricardo'>Ricardo.</span></h1>
                 <h3>Welcome to my website!</h3>
             </div>
         </section>
@@ -58,32 +58,36 @@
                     class='software-development'>Software Development.</span></p>
         </section>
 
-
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-EfopatfJ0s"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-
-        <footer>
-            <h4>Links</h4>
-            <div class="icons">
-                <div class="github">
-                    <a href="https://github.com/ricardonyc/SE-Homework" target='_blank'><i
-                            class="fab fa-github fa-3x"></i></a>
-                    <p>GitHub</p>
-                </div>
-                <div class="email">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rvardo98@gmail.com"><i
-                            class="fas fa-paper-plane fa-3x" target='_blank'></i></a>
-                    <p>Email</p>
-                </div>
-            </div>
-        </footer>
-        <a href="#top" class='top' id='contact'>Jump to Top</a>
-
+        <section class="bottom-section">
+            <h3>Tell me<br>about yourself!</h3>
+            <form action="">
+                <label for="first-name">First Name</label>
+                <input type="text" id='first-name'>
+                <label for="last-name">Last Name</label>
+                <input type="text" id='last-name'>
+                <h4>More about you!</h4>
+                <textarea name="" id="" cols="30" rows="10" placeholder='Tell me about yourself...'></textarea>
+                <input type="submit">
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <h4>Links</h4>
+        <div class="icons">
+            <div class="github">
+                <a href="https://github.com/ricardonyc/SE-Homework" target='_blank'><i
+                        class="fab fa-github fa-3x"></i></a>
+                <p>GitHub</p>
+            </div>
+            <div class="email">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rvardo98@gmail.com"><i
+                        class="fas fa-paper-plane fa-3x" target='_blank'></i></a>
+                <p>Email</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class='top' id='links'>Jump to Top</a>
 
     <!-- Javascript -->
     <script>
