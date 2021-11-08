@@ -21,7 +21,7 @@
             <li><a href="index.html">Home</a></li>
             <!-- <li><a href="index.html">About</a></li> -->
             <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#links">Links</a></li>
         </ul>
 
         <i class="fas fa-bars" onclick="openNav()"></i>
@@ -33,19 +33,19 @@
             <a href="index.html">HOME</a>
             <!-- <a href="#about" onclick='closeNav()'>ABOUT</a> -->
             <a href="hobbies.html">HOBBIES</a>
-            <a href="#">CONTACT</a>
+            <a href="#links" onclick='closeNav()'>LINKS</a>
         </div>
     </div>
 
     <main>
-        <section class="hobbies-top-section">
-            <h2><span class='hobbies-text'>These are<br>a few of my</span><br><span class='hobbies-word'>
-                    Hobbies.</span></h2>
-        </section>
+        <div class="hobbies-top-section">
+            <h1><span class='hobbies-text'>These are<br>a few of my</span><br><span class='hobbies-word'>
+                    Hobbies.</span></h1>
+            <a href="#mid"><i class="fas fa-arrow-circle-down fa-2x"></i></a>
+            </div>
 
-        <h2 class='hobbies-box'>Hobbies</h2>
-        <section class="hobbies-mid-section">
-            
+        <h2 class='hobbies-box' id='mid'>Hobbies</h2>
+        <div class="hobbies-mid-section">
             <div class="card-container">
                 <h3>Running</h3>
                 <i class="fas fa-running fa-2x"></i>
@@ -60,23 +60,49 @@
                 <i class="fas fa-camera fa-2x"></i>
                 <ul>
                     <li>Started in 2017</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Run at least 3x a week</li>
+                    <li>Traveled solely because of photography</li>
+                    <li>Self-taught</li>
                 </ul>
             </div>
             <div class="card-container">
-                <h3>Watching Movies</h3>
-                <i class="fas fa-video fa-2x"></i>
+                <h3>Traveling</h3>
+                <i class="fas fa-globe-americas fa-2x"></i>
                 <ul>
-                    <li>Really enjoy Marvel movies</li>
-                    <li>Go to the movie theaters at least once a month</li>
-                    <li>Run at least 3x a week</li>
+                    <li>Traveled to Spain & France in 2018</li>
+                    <li>Traveled to Mexico in 2016</li>
+                    <li>Enjoy traveling the city as well</li>
                 </ul>
             </div>
 
-        </section>
+        </div>
+
+        <div class="video-container">
+            <h3>A video I created for fun</h3>
+            <p id='video-paragraph'>This was part of an assignment for one of my Journalism classes at Baruch College</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-EfopatfJ0s"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
     </main>
 
+    <footer>
+        <h4>Links</h4>
+        <div class="icons">
+            <div class="github">
+                <a href="https://github.com/ricardonyc/SE-Homework" target='_blank'><i
+                        class="fab fa-github fa-3x"></i></a>
+                <p>GitHub</p>
+            </div>
+            <div class="email">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rvardo98@gmail.com"><i
+                        class="fas fa-paper-plane fa-3x" target='_blank'></i></a>
+                <p>Email</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class='top' id='links'>Jump to Top</a>
 
     <script>
         function openNav() {
