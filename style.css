@@ -210,11 +210,13 @@ main .mid-section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5rem;
   /* outline: 1px solid red; */
 }
 
 main .mid-section .about,
-main .bottom-section h3 {
+main .bottom-section h3,
+main .table-section h3 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: var(--green);
@@ -253,7 +255,7 @@ main .video-container {
   padding-bottom: 400px;
   height: 0;
   max-width: 760px;
-  margin: 4rem auto 0 auto;
+  margin: 4rem auto 10rem auto;
   text-align: center;
 }
 
@@ -273,7 +275,7 @@ main .video-container h3 {
   border: 2px solid var(--green);
   box-shadow: 5px 5px 0 var(--green);
   display: inline;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   transition: color, border-color, box-shadow, 200ms ease;
 }
 
@@ -349,7 +351,7 @@ main .hobbies-mid-section .card-container ul li::before {
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: .5em; /* Also needed for space (tweak if needed) */
+  margin-left: 0.5em; /* Also needed for space (tweak if needed) */
 }
 
 main .hobbies-mid-section .card-container h3 {
@@ -382,7 +384,7 @@ main .bottom-section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 5rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   /* border: 2px solid red; */
   max-width: 700px;
 }
@@ -443,7 +445,63 @@ main .bottom-section form input[type="submit"] {
   font-family: "Fjalla One", sans-serif;
   cursor: pointer;
   transition: box-shadow, color, border 300ms ease;
+  -webkit-appearance: none;
 }
+
+main .table-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .table-section .table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 2rem 0;
+  color: var(--navy2);
+  box-shadow: 7px 7px 0 var(--navy2);
+}
+
+main .table-section .table tr td,
+main .table-setion .table tr th {
+  border: 1px solid var(--navy2);
+  padding: 8px;
+}
+
+main .table-section .table tr th {
+  padding: 0.8rem 0;
+  border: 1px solid var(--navy2);
+}
+
+main .table-section .table tr th:first-child {
+  background: var(--light-green);
+}
+
+main .table-section .table tr {
+  transition: background-color 300ms ease;
+}
+
+/* main .table-section .table tr:nth-child(even){
+  background-color: var(--light-green);
+} */
+
+main .table-section .table tr:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+/* main .table-section .table tr th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+} */
 
 footer {
   background: var(--green);
@@ -543,7 +601,7 @@ footer .icons .email a {
 
   main .mid-section {
     max-width: 1200px;
-    margin: auto;
+    margin: 5rem auto;
   }
 
   main .mid-section .mid-p {
@@ -563,7 +621,8 @@ footer .icons .email a {
   main .mid-section .about:hover,
   main .hobbies-box:hover,
   main .bottom-section h3:hover,
-  main .video-container h3:hover {
+  main .video-container h3:hover,
+  main .table-section h3:hover {
     color: var(--navy2);
     border-color: var(--navy2);
     box-shadow: 5px 5px 0px var(--navy2);
@@ -633,12 +692,11 @@ footer .icons .email a {
     color: var(--green);
     border: 2px solid var(--green);
   }
-  
-
 }
 
 @media (min-width: 1600px) {
-  main .top-section h2 {
+  main .top-section h2,
+  main .hobbies-top-section h1 {
     font-size: 4rem;
   }
 
