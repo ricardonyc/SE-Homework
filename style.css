@@ -68,9 +68,8 @@ nav .desktop-logo {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.93);
-  overflow-x: hidden;
-  overflow-y: hidden;
-  transition: 500ms;
+  overflow: hidden;
+  transition: 450ms;
 }
 
 .mobile-overlay .close-btn {
@@ -86,8 +85,7 @@ nav .desktop-logo {
   position: relative;
   top: 25%;
   width: 100%;
-  text-align: center;
-  margin-top: 30px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +110,6 @@ main .top-section,
 main .hobbies-top-section {
   height: 100vh;
   background: var(--green);
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,13 +182,6 @@ main .top-section h3 {
   transform: translateY(10rem);
   animation: fadeInUp 2s ease 500ms forwards;
   overflow: hidden;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 main .mid-section {
@@ -331,12 +321,12 @@ main .hobbies-mid-section .card-container ul li {
 }
 
 main .hobbies-mid-section .card-container ul li::before {
-  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: var(--navy2); /* Change the color */
+  content: "\2022"; /* \2022 is the CSS Code/unicode for a bullet */
+  color: var(--navy2); 
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: 0.5em; /* Also needed for space (tweak if needed) */
+  width: 1em;
+  margin-left: 0.5em;
 }
 
 main .hobbies-mid-section .card-container h3 {
@@ -521,6 +511,13 @@ footer .icons .email a {
   transition: color, background 250ms ease-in-out;
 }
 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* DESKTOP */
 @media (min-width: 820px) {
   nav {
@@ -554,10 +551,6 @@ footer .icons .email a {
 
   nav .nav-ul li a:hover {
     border-bottom: 4px solid var(--navy2);
-  }
-
-  nav .nav-ul li a:active {
-    border-bottom: 4px solid red;
   }
 
   nav .logo .desktop-logo {
@@ -663,6 +656,7 @@ footer .icons .email a {
   }
 }
 
+/* WIDESCREEN */
 @media (min-width: 1600px) {
   main .top-section h2,
   main .hobbies-top-section h1 {
