@@ -1,12 +1,8 @@
 # SE-Homework
 
 <img src='images/desktop-RV.svg' style="width:250px; display:flex; margin:auto;">
-
----
-<br>
  
 ## [Live site here](https://ricardonyc.github.io/SE-Homework/)
-<br>
 
 ## Technical details
 - Mainly used HTML and CSS
