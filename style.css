@@ -475,7 +475,7 @@ main .table-setion .table tr th {
 }
 
 main .table-section .table tr th {
-  padding: 0.8rem 0;
+  padding: 0.8rem .5rem;
   border: 1px solid var(--navy2);
 }
 
