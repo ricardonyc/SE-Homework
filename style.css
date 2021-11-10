@@ -38,11 +38,7 @@ nav {
   transition: box-shadow, background 350ms ease-in-out;
 }
 
-.scrolling-active {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background: white;
-}
-
+.scrolling-active,
 .scrolling-active-hobbies {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   background: white;
@@ -417,7 +413,7 @@ main .bottom-section form input[type="submit"] {
   color: var(--navy2);
   font-family: "Fjalla One", sans-serif;
   cursor: pointer;
-  transition: box-shadow, color, border 300ms ease;
+  transition: box-shadow, color, border 400ms ease;
   -webkit-appearance: none;
 }
 
@@ -462,6 +458,30 @@ main .table-section .table tr {
 
 main .table-section .table tr:hover {
   background-color: rgb(236, 236, 236);
+}
+
+main figure {
+  max-width: 600px;
+  margin: 4rem auto 0 auto;
+}
+
+main figure a {
+  display: flex;
+  justify-content: center;
+}
+
+main figure a .bridge-photo {
+  width: 80%;
+  border: 2px solid var(--navy2);
+  box-shadow: 8px 8px 0 var(--navy2);
+}
+
+main figure figcaption {
+  margin-top: 1.5rem;
+  color: var(--navy2);
+  opacity: .8;
+  text-align: center;
+  padding: .5rem 1rem;
 }
 
 footer {
@@ -574,6 +594,10 @@ footer .icons .email a {
     font-size: 1.3rem;
   }
 
+  main .mid-section .photo {
+    margin-top: 3rem;
+  }
+
   main .mid-section .photo:hover {
     transform: translateY(-10%);
     box-shadow: 8px 8px 0px var(--green);
@@ -631,8 +655,16 @@ footer .icons .email a {
 
   main .hobbies-box,
   main .mid-section .about,
-  main .video-container h3 {
+  main .video-container h3{
     font-size: 1.7rem;
+  }
+
+  main figure figcaption {
+    font-size: 1.2rem;
+  }
+
+  main figure .bridge-photo {
+    box-shadow: 12px 12px 0 var(--navy2);
   }
 
   main .hobbies-mid-section .card-container {
