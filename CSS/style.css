@@ -155,8 +155,8 @@ main .hobbies-top-section h1 {
 main .hobbies-top-section .fa-arrow-circle-down {
   color: var(--navy2);
   font-size: 2rem;
-  /* transform: translateY(10rem); */
-  /* animation: fadeInUp 2s ease forwards; */
+  /* transform: translateY(10rem);
+  animation: fadeInUp 2s ease forwards; */
   transition: color 300ms ease-in-out;
   margin-top: 3rem;
 }
