@@ -147,16 +147,16 @@ main .top-section h1,
 main .hobbies-top-section h1 {
   color: var(--dark-green);
   font-size: 3rem;
-  opacity: 0;
-  transform: translateY(10rem);
-  animation: fadeInUp 2s ease forwards;
+  /* opacity: 0;
+  transform: translateY(10rem); */
+  /* animation: fadeInUp 2s ease forwards; */
 }
 
 main .hobbies-top-section .fa-arrow-circle-down {
   color: var(--navy2);
   font-size: 2rem;
-  transform: translateY(10rem);
-  animation: fadeInUp 2s ease forwards;
+  /* transform: translateY(10rem); */
+  /* animation: fadeInUp 2s ease forwards; */
   transition: color 300ms ease-in-out;
   margin-top: 3rem;
 }
@@ -174,9 +174,9 @@ main .hobbies-top-section .hobbies-text {
 main .top-section h3 {
   color: var(--navy2);
   margin-top: 1rem;
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(10rem);
-  animation: fadeInUp 2s ease 500ms forwards;
+  animation: fadeInUp 2s ease 500ms forwards; */
   overflow: hidden;
 }
 
@@ -318,7 +318,7 @@ main .hobbies-mid-section .card-container ul li {
 
 main .hobbies-mid-section .card-container ul li::before {
   content: "\2022"; /* \2022 is the CSS Code/unicode for a bullet */
-  color: var(--navy2); 
+  color: var(--navy2);
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em;
@@ -444,7 +444,7 @@ main .table-setion .table tr th {
 }
 
 main .table-section .table tr th {
-  padding: 0.8rem .5rem;
+  padding: 0.8rem 0.5rem;
   border: 1px solid var(--navy2);
 }
 
@@ -479,9 +479,9 @@ main figure a .bridge-photo {
 main figure figcaption {
   margin-top: 1.5rem;
   color: var(--navy2);
-  opacity: .8;
+  opacity: 0.8;
   text-align: center;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 footer {
@@ -581,6 +581,16 @@ footer .icons .email a {
     display: none;
   }
 
+  /* ----------------------------------------------------------- */
+  main .hobbies-top-section .fa-arrow-circle-down,
+  main .top-section h1,
+  main .hobbies-top-section h1,
+  main .top-section h3 {
+    animation: fadeInUp 2s ease forwards;
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
   main .mid-section {
     max-width: 1200px;
     margin: 5rem auto;
@@ -655,7 +665,7 @@ footer .icons .email a {
 
   main .hobbies-box,
   main .mid-section .about,
-  main .video-container h3{
+  main .video-container h3 {
     font-size: 1.7rem;
   }
 
